@@ -10,8 +10,9 @@ public class Rock : Interactable
     // Override the Interact method to define custom behavior for the tree
     public override void Interact()
     {
-        rockTotal = rockTotal + rockAmount;
-        rockText.text = $"Wood: {rockTotal}";
+        Global.rockAmount += rockAmount;
+        rockTotal = Global.rockAmount;
+        rockText.text = $"Rock: {rockTotal}";
         Debug.Log("Mining Rock...");
         // Play chopping animation and spawn wood
     }

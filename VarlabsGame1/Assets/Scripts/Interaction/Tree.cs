@@ -10,7 +10,8 @@ public class Tree : Interactable
     // Override the Interact method to define custom behavior for the tree
     public override void Interact()
     {
-        woodTotal = woodTotal + woodAmount;
+        Global.woodAmount += woodAmount;
+        woodTotal = Global.woodAmount;
         woodText.text = $"Wood: {woodTotal}";
         Debug.Log("Chopping down tree...");
         // Play chopping animation and spawn wood

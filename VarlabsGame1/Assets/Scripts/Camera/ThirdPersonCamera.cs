@@ -10,8 +10,6 @@ public class ThirdPersonCamera : MonoBehaviour
     public float height = 3.0f; // The height of the camera above the player
     public float rotationDamping = 3.0f; // The speed at which the camera rotates
     public float fixedAngle = 45.0f; // The fixed angle of the camera above the player
-    public float minVerticalAngle = 5.0f; // The minimum vertical angle of the camera
-    public float maxVerticalAngle = 85.0f; // The maximum vertical angle of the camera
     public float verticalRotationSpeed = 3.0f; // The speed at which the camera rotates vertically
     public float heightChangeSpeed = 3.0f; // The speed at which the camera's height changes
 
@@ -34,7 +32,7 @@ public class ThirdPersonCamera : MonoBehaviour
         // Handle horizontal rotation input
         float mouseX = Input.GetAxis("Mouse X");
         horizontalAngle += mouseX;
-        horizontalAngle = Mathf.Clamp(horizontalAngle, -180.0f, 180.0f);
+        horizontalAngle = Mathf.Clamp(horizontalAngle, -360f, 360f);
 
         // Handle zoom and height input
         float scroll = Input.GetAxis("Mouse ScrollWheel");

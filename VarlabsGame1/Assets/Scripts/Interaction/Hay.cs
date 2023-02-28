@@ -12,7 +12,8 @@ public class Hay : Interactable
     // Override the Interact method to define custom behavior for the tree
     public override void Interact()
     {
-        hayTotal = hayAmount + hayTotal;
+        Global.hayAmount += hayAmount;
+        hayTotal = Global.hayAmount;
         hayText.text = $"Hay: {hayTotal}";
         Debug.Log("Cutting Wheat..");
         // Play chopping animation and spawn wood
