@@ -32,7 +32,8 @@ public class ThirdPersonCamera : MonoBehaviour
         // Handle horizontal rotation input
         float mouseX = Input.GetAxis("Mouse X");
         horizontalAngle += mouseX;
-        horizontalAngle = Mathf.Clamp(horizontalAngle, -360f, 360f);
+        //horizontalAngle = Mathf.Clamp(horizontalAngle, -360f, 360f);
+        
 
         // Handle zoom and height input
         float scroll = Input.GetAxis("Mouse ScrollWheel");

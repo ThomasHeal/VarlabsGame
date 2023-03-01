@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ThirdPersonCharacterController : MonoBehaviour
@@ -25,22 +23,21 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Update()
     {
+
         // Check if the character is grounded
         if (controller.isGrounded)
         {
             // Get the horizontal and vertical input
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
             // Set the movement direction based on the input and camera's forward vector
             Vector3 forward = cameraTransform.forward;
             forward.y = 0.0f;
             forward.Normalize();
-            Vector3 right = cameraTransform.right;
-            right.y = 0.0f;
-            right.Normalize();
-            moveDirection = forward * vertical + right * horizontal;
-            moveDirection = moveDirection.normalized * speed;
+            Vector3 horizontal = Vector3.Cross(Vector3.up, forward);
+            moveDirection = forward * verticalInput + horizontal * horizontalInput;
+            moveDirection *= speed;
 
             // Rotate the character to face the movement direction
             if (moveDirection.magnitude > 0.01f)
@@ -49,7 +46,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
             }
 
             // Set the running animation state
-            bool isRunning = (horizontal != 0 || vertical != 0);
+            bool isRunning = (horizontalInput != 0 || verticalInput != 0);
             anim.SetBool("isRunning", isRunning);
 
             // Jump if the Jump button is pressed
@@ -59,16 +56,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
             }
         }
 
-        // Apply gravity
-        moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the character controller
         controller.Move(moveDirection * Time.deltaTime);
-
+        // Apply gravity
+        moveDirection.y -= gravity * Time.deltaTime;
         // Stop the character's movement when the input is released
-        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
-        {
-            moveDirection = Vector3.zero;
-        }
+
+
+
     }
 }
