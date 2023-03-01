@@ -16,4 +16,15 @@ public class AIPathfinding : MonoBehaviour
     {
         agent.SetDestination(player.position); // Set the target to the player's position
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("WoodDropOff") && this.gameObject.tag == "WoodGuy")
+        {
+            Debug.Log("You dropped off the wood guy");
+            Destroy(gameObject);
+        }
+        
+    }
+
 }
