@@ -9,6 +9,7 @@ TagManager:
   - WoodGuy
   - RockSpawner
   - WoodSpawner
+  - HaySpawner
   layers:
   - Default
   - TransparentFX
