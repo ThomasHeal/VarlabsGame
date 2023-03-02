@@ -9165,7 +9165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1019032837
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10898,7 +10898,7 @@ MonoBehaviour:
   minDistance: 2
   maxDistance: 10
   height: 5
-  rotationDamping: 3
+  rotationDamping: 6
   fixedAngle: 30
   verticalRotationSpeed: 3
   heightChangeSpeed: 3

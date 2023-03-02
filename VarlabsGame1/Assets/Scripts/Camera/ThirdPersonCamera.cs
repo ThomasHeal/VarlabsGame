@@ -40,6 +40,14 @@ public class ThirdPersonCamera : MonoBehaviour
         distance += scroll * 5.0f;
         distance = Mathf.Clamp(distance, minDistance, maxDistance);
         height += scroll * heightChangeSpeed;
+        if(height <= 3.0f)
+        {
+            height = 3.0f;
+        }
+        if(height >= 6.0f)
+        {
+            height = 6.0f;
+        }
         height = Mathf.Clamp(height, 0.0f, maxDistance);
 
         // Rotate the player to face the camera direction

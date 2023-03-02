@@ -10,6 +10,11 @@ public class Rock : Interactable
     // Override the Interact method to define custom behavior for the tree
     public override void Interact()
     {
+        if(WeaponSwitcher.weaponNameGlobal != "PickAxe")
+        {
+            Debug.Log("Wrong tool");
+            return;
+        }
         Global.rockAmount += rockAmount;
         rockTotal = Global.rockAmount;
         rockText.text = $"Rock: {rockTotal}";

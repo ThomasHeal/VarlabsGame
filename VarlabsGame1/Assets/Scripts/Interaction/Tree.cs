@@ -10,6 +10,11 @@ public class Tree : Interactable
     // Override the Interact method to define custom behavior for the tree
     public override void Interact()
     {
+        if (WeaponSwitcher.weaponNameGlobal != "Axe")
+        {
+            Debug.Log("Incorrect tool");
+            return;
+        }
         Global.woodAmount += woodAmount;
         woodTotal = Global.woodAmount;
         woodText.text = $"Wood: {woodTotal}";

@@ -12,6 +12,8 @@ public class WeaponSwitcher : MonoBehaviour
     public TMPro.TextMeshProUGUI weaponNameText;
     public string[] weaponNames;
 
+    public static string weaponNameGlobal;
+
 
     private GameObject[] weapons;
     private int currentWeaponIndex;
@@ -34,6 +36,7 @@ public class WeaponSwitcher : MonoBehaviour
         weapons[currentWeaponIndex].SetActive(true);
         SetWeaponUI();
         weaponNameText.text = weaponNames[currentWeaponIndex];
+        weaponNameGlobal = weaponNames[currentWeaponIndex];
     }
 
 
@@ -62,6 +65,7 @@ public class WeaponSwitcher : MonoBehaviour
 
         // Get the name of the current weapon from the weaponNames array
         string weaponName = weaponNames[currentWeaponIndex];
+        weaponNameGlobal = weaponName;
 
         // Print the name of the current weapon to the console
         Debug.Log("Switched to weapon: " + weaponName);

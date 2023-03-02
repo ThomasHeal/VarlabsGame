@@ -12,6 +12,11 @@ public class Hay : Interactable
     // Override the Interact method to define custom behavior for the tree
     public override void Interact()
     {
+        if(WeaponSwitcher.weaponNameGlobal != "Sickle")
+        {
+            Debug.Log("Wrong tool");
+            return;
+        }
         Global.hayAmount += hayAmount;
         hayTotal = Global.hayAmount;
         hayText.text = $"Hay: {hayTotal}";

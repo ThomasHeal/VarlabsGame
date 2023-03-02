@@ -50,7 +50,7 @@ public class SpawnPillar : MonoBehaviour
         }
         if(material < 30)
         {
-            Debug.Log("not enough " + spawnerType);
+            //Debug.Log("not enough " + spawnerType);
         }
         if(canSpawn && Input.GetKeyDown(KeyCode.E) && material >= 30)
         {
