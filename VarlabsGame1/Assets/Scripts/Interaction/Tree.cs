@@ -19,6 +19,5 @@ public class Tree : Interactable
         woodTotal = Global.woodAmount;
         woodText.text = $"Wood: {woodTotal}";
         Debug.Log("Chopping down tree...");
-        // Play chopping animation and spawn wood
     }
 }

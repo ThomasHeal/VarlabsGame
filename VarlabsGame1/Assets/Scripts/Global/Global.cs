@@ -5,7 +5,7 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     public static int woodAmount = 0;
-    public static int hayAmount = 0;
+    public static int boneAmount = 0;
     public static int rockAmount = 0;
 
     // Start is called before the first frame update

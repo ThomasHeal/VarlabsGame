@@ -26,9 +26,9 @@ public class SpawnPillar : MonoBehaviour
         {
             spawnerType = "wood";
         }
-        if (this.tag == "HaySpawner")
+        if (this.tag == "boneSpawner")
         {
-            spawnerType = "hay";
+            spawnerType = "bone";
         }
     }
 
@@ -43,7 +43,7 @@ public class SpawnPillar : MonoBehaviour
                 material = Global.woodAmount;
                 break;
             case "hay":
-                material = Global.hayAmount;
+                material = Global.boneAmount;
                 break;
             default:
                 break;
@@ -63,14 +63,14 @@ public class SpawnPillar : MonoBehaviour
                     Global.woodAmount = Global.woodAmount - 30;
                     break;
                 case "hay":
-                    Global.hayAmount = Global.hayAmount - 30;
+                    Global.boneAmount = Global.boneAmount - 30;
                     break;
                 default:
                     break;
             }
             rockText.text = $"Rock: {Global.rockAmount}";
             woodText.text = $"Wood: {Global.woodAmount}";
-            hayText.text = $"Hay: {Global.hayAmount}";
+            hayText.text = $"Bone: {Global.boneAmount}";
 
 
             Debug.Log("you spawned a monster");

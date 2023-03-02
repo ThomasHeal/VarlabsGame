@@ -31,6 +31,7 @@ public class ScreenShotManager : MonoBehaviour
         // Take a screenshot and save it to a file
         string screenshotName = "screenshot" + screenshotCount + ".png";
         string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
+        Debug.Log("took screenshot");
 
         // Create a render texture and set it as the target texture of the screenshot camera
         RenderTexture renderTexture = new RenderTexture(screenshotWidth, screenshotHeight, 24);
