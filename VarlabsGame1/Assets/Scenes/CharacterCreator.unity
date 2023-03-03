@@ -27791,6 +27791,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6625468904039524193}
+    - target: {fileID: 460196138421847015, guid: 7a12f3ec254ff7a45bce3abdf3fc9954, type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 460196138421847015, guid: 7a12f3ec254ff7a45bce3abdf3fc9954, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 461492137438985140, guid: 7a12f3ec254ff7a45bce3abdf3fc9954, type: 3}
       propertyPath: m_Name
       value: TombMonster
@@ -27909,6 +27917,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6625468904039524193}
+    - target: {fileID: 491980629626209091, guid: 7950bb22c582eaa4ca2970e3dfd6831b, type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 491980629626209091, guid: 7950bb22c582eaa4ca2970e3dfd6831b, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 492617008495773004, guid: 7950bb22c582eaa4ca2970e3dfd6831b, type: 3}
       propertyPath: m_Name
       value: WoodMonster
@@ -43229,6 +43245,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4617741323428099720, guid: 95424ca36c16be747aa2c9329bd3d263, type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617741323428099720, guid: 95424ca36c16be747aa2c9329bd3d263, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4617741323428099721, guid: 95424ca36c16be747aa2c9329bd3d263, type: 3}
       propertyPath: player
       value: 
@@ -57850,6 +57874,14 @@ PrefabInstance:
     - target: {fileID: 6587535423935330972, guid: 83caab25e3388db4abf7b5148083a802, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588177035952828668, guid: 83caab25e3388db4abf7b5148083a802, type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588177035952828668, guid: 83caab25e3388db4abf7b5148083a802, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6588177035952828669, guid: 83caab25e3388db4abf7b5148083a802, type: 3}
       propertyPath: player
