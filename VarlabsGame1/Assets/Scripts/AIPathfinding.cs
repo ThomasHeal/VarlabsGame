@@ -10,6 +10,8 @@ public class AIPathfinding : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        
+        
     }
 
     void Update()

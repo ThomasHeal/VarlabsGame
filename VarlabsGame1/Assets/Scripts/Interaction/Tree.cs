@@ -17,7 +17,7 @@ public class Tree : Interactable
         }
         Global.woodAmount += woodAmount;
         woodTotal = Global.woodAmount;
-        woodText.text = $"Wood: {woodTotal}";
+        woodText.text = $"{woodTotal}";
         Debug.Log("Chopping down tree...");
     }
 }

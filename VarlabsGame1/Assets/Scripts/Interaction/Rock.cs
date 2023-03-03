@@ -17,7 +17,7 @@ public class Rock : Interactable
         }
         Global.rockAmount += rockAmount;
         rockTotal = Global.rockAmount;
-        rockText.text = $"Rock: {rockTotal}";
+        rockText.text = $"{rockTotal}";
         Debug.Log("Mining Rock...");
         // Play chopping animation and spawn wood
     }

@@ -10,7 +10,7 @@ public class SpawnPillar : MonoBehaviour
 
     public TMPro.TextMeshProUGUI rockText;
     public TMPro.TextMeshProUGUI woodText;
-    public TMPro.TextMeshProUGUI hayText;
+    public TMPro.TextMeshProUGUI tombText;
 
     public string spawnerType = "";
     public int material;
@@ -26,9 +26,9 @@ public class SpawnPillar : MonoBehaviour
         {
             spawnerType = "wood";
         }
-        if (this.tag == "boneSpawner")
+        if (this.tag == "TombSpawner")
         {
-            spawnerType = "bone";
+            spawnerType = "tomb";
         }
     }
 
@@ -42,7 +42,7 @@ public class SpawnPillar : MonoBehaviour
             case "wood":
                 material = Global.woodAmount;
                 break;
-            case "hay":
+            case "tomb":
                 material = Global.boneAmount;
                 break;
             default:
@@ -62,15 +62,15 @@ public class SpawnPillar : MonoBehaviour
                 case "wood": 
                     Global.woodAmount = Global.woodAmount - 30;
                     break;
-                case "hay":
+                case "tomb":
                     Global.boneAmount = Global.boneAmount - 30;
                     break;
                 default:
                     break;
             }
-            rockText.text = $"Rock: {Global.rockAmount}";
-            woodText.text = $"Wood: {Global.woodAmount}";
-            hayText.text = $"Bone: {Global.boneAmount}";
+            rockText.text = $"{Global.rockAmount}";
+            woodText.text = $"{Global.woodAmount}";
+            tombText.text = $"{Global.boneAmount}";
 
 
             Debug.Log("you spawned a monster");

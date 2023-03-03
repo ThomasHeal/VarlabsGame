@@ -19,7 +19,7 @@ public class Bone : Interactable
         }
         Global.boneAmount += boneAmount;
         boneTotal = Global.boneAmount;
-        boneText.text = $"Bones: {boneTotal}";
+        boneText.text = $"{boneTotal}";
         Debug.Log("Crushing Bones...");
     }
 }
